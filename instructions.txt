@@ -1,0 +1,112 @@
+Mais o que desgrama é React JS?
+- PEsquisar RestFul-SOAP
+
+-Framework or Lib to build interfaces
+-Faz o mesmo que o javascript puro faz de maneira organizada
+-Manipular a DOM do projeto
+-Muito utilizado para SPAs
+-Utliznado o react no frontend, o backend geralmente retorna os dados em JSON (Utlizavel em API REST)
+-Frontend mais flexível para o frontend
+-Organização exemplar devido a componetinação
+
+SImple COmponent
+-É uma classe
+-Extende a classe Component
+-Utiliza o método render()
+-Utiliza HTML (JSX)
+-Codígo html manipulado pelo JS
+
+Ferramentas para criação do projeto
+-Node 
+-NPM
+-YARN (Um pouco mais veloz)
+
+Criando projeto:
+1. Create react app (NPM install)
+2. create-react-app
+
+Estrutura de pastas:
+node_modules = dependencias do projeto
+public = arquvivos acessíveis diretamente pelo usuário final da aplicação
+src = pasta onde vai ficar todo o codigo da aplicação (css, arquivo de teste, logo...)
+.gitignore = ignorar arquivos que não precisam subir no git
+packpage.json = onde fica as dependecias que foram ou deverão er instaladas para utiliza~ção do projeto e alguns comandos para rodar a aplicação
+
+O que desgrama são componentes?
+Usar um arquivo como tag html. 
+
+O componente é um conjunto de parte visual (hmtl) + a parte funcional (js) + a parte de estilização (css).
+
+Todo componente tem um único método obrigatório.
+
+Manipulando projeto:
+1. Apagar arquivios da pasta src
+2. Remover import não mais necessários (index.js e app.js)
+3. Modificar arquivo App.js (Hello World)
+4. NPM Start
+
+Criando o header:
+src/components/Header/index.js
+
+Dentro do index.js
+import react
+criar cost (variável) com a função Header = stateless
+dentro da função: tag header id="main-header"
+components
+export default
+
+Import header no app.js
+
+Estiliznado o componente:
+Criar arquivo style na pasta Header
+Import dentro do index.js da pastar Header
+
+Arrumar estilização padrão
+Criar arquivo style.css  na pasta src
+Fazer o import do arquivo no APP.js
+Remover estilizações globais {margin, padding, outline e box-sizing}
+dentro do body acrescentar um font-family {Da sua escolha, background da aplicação: #fafafa, cor padrão, color: #333}
+
+Integração com o backend:
+Instalção do axios
+yarn add axios
+Criar pasta services dentro da pasta src
+Criar arquivo api.js dentro do services
+Fazer import do axios
+Criar cost api = axios.create {(baseURL: 'http://rocketseat-node.herokuapp.com/api')}
+Export Default api
+
+Import api dentro do App.js
+
+Criar a lógica de conexção com a api em diferentes arquivos
+Criar a pasta dentro da src chamado pages/main/index.js
+Import do react e component
+fazer o export default class Main extends Component contendo o método render() e um return <h1>He</h1>
+
+Passar import da api pra dentro do main/index.js
+Import main/index.js dentro do App.js
+
+Buscando informações na rota da API:
+Métodos de ciclo de vida = COmponentDidMount() {
+this.loadProducts();}
+
+Criar a função loadProducts em arrow function
+const response com async e await + api.get('/products')
+
+console.log no response
+
+ATENÇÃO: Métodos que pertencem ao React usa função normal, função criada pelo dev deve ser em arrow function
+
+ARMAZENANDO VALORES DO BACKEND:
+conceito de estado (state) = objeto
+
+fazer uso do state devido ao método render  (mais prático e viável)
+
+O método render serve para retornar a parte visual
+
+O produtos são listados utilizando o método map()
+
+
+
+
+
