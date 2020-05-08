@@ -106,7 +106,49 @@ O método render serve para retornar a parte visual
 
 O produtos são listados utilizando o método map()
 
+LISTANDO PRODUTOS
+----------------------------------------------------------------------------------------------------------------
+criar tag article dentro da render() utilizando a key={product_id}
+<strong> com product.title, <p> para product.description, e um <a> para acessar os detalhes do produto
+estilizar a listagem de produtos criando um arquivo css dentro do mesmo diretório
+----------------------------------------------------------------------------------------------------------------
+CRIANDO PÁGINA ANTERIOR/PRÓXIMA
 
 
+Criar botões no index.js e pesonalizar div com id="acttions
+display: flex
+justify content: space-between
+margin-botton: 20px
+
+personalizar botões
+paddin: 10px
+border-radius: 5px
+border:0;
+background laranja
+color: #fff;
+font-size: 16px;
+font-weight: bold;
+cursor pointer
+
+hover 
+opacity: 0.7;
+
+CRIANDO FUNCIONALIDADE DOS BOTÕES
+onClick={this.prevPage & nextPage}
+
+Cria as funções prevPage e nextPage
+
+Criar uma propriedade productInfo: {} (dentro do state)
+
+dentro do loadProducts cria uma variável
+cost { docs, ...productInfo } = response.data;
+
+salvar products: docs, productInfo
+
+Cria a propriedade page dentro do state sentando a página 1
+
+Criar a lógica da função nextPage e prevPage
+
+Desabilitar retorno quando não tiver pagina anterior ou proxima utiuliznado a funçaõ disable
 
 
