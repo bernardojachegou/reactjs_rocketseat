@@ -151,4 +151,15 @@ Criar a lógica da função nextPage e prevPage
 
 Desabilitar retorno quando não tiver pagina anterior ou proxima utiuliznado a funçaõ disable
 
+CONFIGURANDO NAVEGAÇÃO
+instalar react-router-dom
+criar arquivo router.js
+configurar arquivo router.js
+Importar rotas dentro do app.js
+criar pasta products dentro das pages
+criar arquivo index.js dentro da pasta products
+configurar o arquivo routes.js para exibir a pagina
+
+NAVEGANDO POR DETALHES
+cria a lógia do arquivo que irá exibir os detalhes do produto
 
