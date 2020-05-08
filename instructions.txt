@@ -1,165 +1,126 @@
-Mais o que desgrama é React JS?
-- PEsquisar RestFul-SOAP
-
--Framework or Lib to build interfaces
+Curso ReactJS (Rocketseat)
+Informações sobre ReactJS
+----------------------------------------------------------------------------------------------------------------
+INFORMAÇÕES básicas:
+-Biblioteca específica para criação de interfaces que:
+-Surgiu em 2011 devido uma necessidade real
 -Faz o mesmo que o javascript puro faz de maneira organizada
--Manipular a DOM do projeto
--Muito utilizado para SPAs
--Utliznado o react no frontend, o backend geralmente retorna os dados em JSON (Utlizavel em API REST)
--Frontend mais flexível para o frontend
--Organização exemplar devido a componetinação
-
-SImple COmponent
+-É utilizada para manipular a DOM do projeto
+-É Muito utilizada para SPAs
+-Geralmente retorna os dados em JSON (Utlizavel em API REST)
+-Frontend mais flexível
+-Organização exemplar devido a componetização
+----------------------------------------------------------------------------------------------------------------
+CONCEITO de componentização:
+O componente é um conjunto de parte visual (hmtl) + a parte funcional (js) + estilização (css).
+SIMPLE COMPONENT
 -É uma classe
 -Extende a classe Component
 -Utiliza o método render()
 -Utiliza HTML (JSX)
--Codígo html manipulado pelo JS
-
-Ferramentas para criação do projeto
--Node 
--NPM
--YARN (Um pouco mais veloz)
-
-Criando projeto:
-1. Create react app (NPM install)
-2. create-react-app
-
-Estrutura de pastas:
-node_modules = dependencias do projeto
-public = arquvivos acessíveis diretamente pelo usuário final da aplicação
-src = pasta onde vai ficar todo o codigo da aplicação (css, arquivo de teste, logo...)
-.gitignore = ignorar arquivos que não precisam subir no git
-packpage.json = onde fica as dependecias que foram ou deverão er instaladas para utiliza~ção do projeto e alguns comandos para rodar a aplicação
-
-O que desgrama são componentes?
-Usar um arquivo como tag html. 
-
-O componente é um conjunto de parte visual (hmtl) + a parte funcional (js) + a parte de estilização (css).
-
-Todo componente tem um único método obrigatório.
-
-Manipulando projeto:
-1. Apagar arquivios da pasta src
-2. Remover import não mais necessários (index.js e app.js)
-3. Modificar arquivo App.js (Hello World)
-4. NPM Start
-
-Criando o header:
-src/components/Header/index.js
-
-Dentro do index.js
-import react
-criar cost (variável) com a função Header = stateless
-dentro da função: tag header id="main-header"
-components
-export default
-
-Import header no app.js
-
-Estiliznado o componente:
-Criar arquivo style na pasta Header
-Import dentro do index.js da pastar Header
-
-Arrumar estilização padrão
-Criar arquivo style.css  na pasta src
-Fazer o import do arquivo no APP.js
-Remover estilizações globais {margin, padding, outline e box-sizing}
-dentro do body acrescentar um font-family {Da sua escolha, background da aplicação: #fafafa, cor padrão, color: #333}
-
-Integração com o backend:
-Instalção do axios
-yarn add axios
-Criar pasta services dentro da pasta src
-Criar arquivo api.js dentro do services
-Fazer import do axios
-Criar cost api = axios.create {(baseURL: 'http://rocketseat-node.herokuapp.com/api')}
-Export Default api
-
-Import api dentro do App.js
-
-Criar a lógica de conexção com a api em diferentes arquivos
-Criar a pasta dentro da src chamado pages/main/index.js
-Import do react e component
-fazer o export default class Main extends Component contendo o método render() e um return <h1>He</h1>
-
-Passar import da api pra dentro do main/index.js
-Import main/index.js dentro do App.js
-
-Buscando informações na rota da API:
-Métodos de ciclo de vida = COmponentDidMount() {
-this.loadProducts();}
-
-Criar a função loadProducts em arrow function
-const response com async e await + api.get('/products')
-
-console.log no response
-
+-Codígo HTML manipulado pelo JS
+----------------------------------------------------------------------------------------------------------------
+ESTRUTURA do projeto:
+-> node_modules = dependências do projeto
+-> public = arquivos acessíveis diretamente pelo usuário final da aplicação
+-> src = pasta que guarda o código da aplicação (css, arquivo de teste, logo, etc...)
+-> .gitignore = ignorar arquivos que não precisam subir no git
+-> packpage.json = dependências utilizadas e comandos para rodar a aplicação (scripts)
+----------------------------------------------------------------------------------------------------------------
+Preparando projeto com ReactJS (Básico)
+NO TERMINAL:
+npm install create-react-app 
+create-react-app nome_do_projeto
+----------------------------------------------------------------------------------------------------------------
+1. Manipulando o PROJETO:
+1.1 Apagar arquivos da pasta src
+1.2 Remover import não mais necessários (index.js e App.js)
+1.3 Modificar arquivo App.js (Hello World)
+1.4 NPM Start (testar funcionamento)
+----------------------------------------------------------------------------------------------------------------
+1. Criando o HEADER:
+1.1 Criar pastas e arquivos: src/components/Header/index.js
+2. Dentro do index.js:
+2.1 Fazer import do React
+2.2 criar cost (variável) com a função Header = stateless
+2.3 dentro da função: tag header id="main-header"
+2.4 Fazer um export default
+2.5 Fazer import do header no App.js
+----------------------------------------------------------------------------------------------------------------
+1. Estilização do COMPONENTE:
+1.1 Criar arquivo style na pasta Header
+1.2 Fazer import dentro do index.js da pastar Header
+----------------------------------------------------------------------------------------------------------------
+1. Arrumar ESTILIZAÇÃO GLOBAL:
+1.1 Criar o arquivo styles.css dentro da pasta src
+1.2 Fazer o import do arquivo no APP.js
+1.3 Setar estilização global {margin, padding, outline e box-sizing}
+1.4 No body acrescentar um font-family, background e color
+----------------------------------------------------------------------------------------------------------------
+1. Integração com o BACKEND:
+1.1 Instalção do axios: -yarn add axios-
+1.2 Criar pasta services dentro da pasta src
+1.3 Criar arquivo api.js dentro do services
+1.4 Fazer import do axios
+1.5 Criar cost api com método axios.create e baseURL
+1.6 Fazer um export default api
+1.7 Fazer um import dentro do App.js
+----------------------------------------------------------------------------------------------------------------
+2. Criar a lógica para a conexão com o backend:
+2.1 Criar pasta e arquivo src/pages/main/index.js
+2.2 Fazer import do react e component
+2.3 Fazer o export default da class Main (extends Component) com método render()
+2.4 Passar import da api pra dentro do main/index.js
+2.5 Fazer import main/index.js dentro do App.js
+----------------------------------------------------------------------------------------------------------------
+1. Buscando informações na rota da API:
+1.1 Métodos de ciclo de vida = COmponentDidMount() { this.loadProducts(); }
+1.2 Criar a função loadProducts utilizando arrow function
+1.3 Criar uma const response com async e await + api.get('/products')
+1.4 console.log no response (teste)
+----------------------------------------------------------------------------------------------------------------
 ATENÇÃO: Métodos que pertencem ao React usa função normal, função criada pelo dev deve ser em arrow function
-
-ARMAZENANDO VALORES DO BACKEND:
-conceito de estado (state) = objeto
-
-fazer uso do state devido ao método render  (mais prático e viável)
-
-O método render serve para retornar a parte visual
-
-O produtos são listados utilizando o método map()
-
-LISTANDO PRODUTOS
 ----------------------------------------------------------------------------------------------------------------
-criar tag article dentro da render() utilizando a key={product_id}
-<strong> com product.title, <p> para product.description, e um <a> para acessar os detalhes do produto
-estilizar a listagem de produtos criando um arquivo css dentro do mesmo diretório
+1. Armazenando os valores do BACKEND:
+1.1 Utilizar o conceito de state/object
+1.2 Fazer uso do state devido ao método render (praticidade)
+1.3 Método render() para retorno da parte visual
+1.4 Produtos listados utilizando o método map()
 ----------------------------------------------------------------------------------------------------------------
-CRIANDO PÁGINA ANTERIOR/PRÓXIMA
-
-
-Criar botões no index.js e pesonalizar div com id="acttions
-display: flex
-justify content: space-between
-margin-botton: 20px
-
-personalizar botões
-paddin: 10px
-border-radius: 5px
-border:0;
-background laranja
-color: #fff;
-font-size: 16px;
-font-weight: bold;
-cursor pointer
-
-hover 
-opacity: 0.7;
-
-CRIANDO FUNCIONALIDADE DOS BOTÕES
-onClick={this.prevPage & nextPage}
-
-Cria as funções prevPage e nextPage
-
-Criar uma propriedade productInfo: {} (dentro do state)
-
-dentro do loadProducts cria uma variável
-cost { docs, ...productInfo } = response.data;
-
-salvar products: docs, productInfo
-
-Cria a propriedade page dentro do state sentando a página 1
-
-Criar a lógica da função nextPage e prevPage
-
-Desabilitar retorno quando não tiver pagina anterior ou proxima utiuliznado a funçaõ disable
-
-CONFIGURANDO NAVEGAÇÃO
-instalar react-router-dom
-criar arquivo router.js
-configurar arquivo router.js
-Importar rotas dentro do app.js
-criar pasta products dentro das pages
-criar arquivo index.js dentro da pasta products
-configurar o arquivo routes.js para exibir a pagina
-
-NAVEGANDO POR DETALHES
-cria a lógia do arquivo que irá exibir os detalhes do produto
-
+1. Listando os PRODUTOS:
+1.1 criar tag article dentro da render() utilizando a key={product_id}
+1.2 >strong< com {product.title}
+1.3 >p< com {product.description}
+1.4 >a< para acessar os detalhes do produto
+1.5 Estilizar a listagem de produtos criando um arquivo css dentro do mesmo diretório
+----------------------------------------------------------------------------------------------------------------
+1. Criando página ANTERIOR/PRÓXIMA:
+1.1 Criar botões no index.js e pesonalizar div com id="actions"
+1.2 Personalizar a div e o button
+>div<
+display: flex - justify content: space-between - margin-botton: 20px
+>button<
+padding - border-radius - border - background - color - font-size - font-weight - cursor - hover 
+----------------------------------------------------------------------------------------------------------------
+1. Criando a funcionalidade dos BOTÕES:
+1.1 Utilizar o método onClick={this.prevPage & nextPage}
+1.2 Cria as funções prevPage e nextPage
+1.3 Criar uma propriedade productInfo: {} (dentro do state)
+1.4 Criar cost dentro do loadProducts = cost { docs, ...productInfo } = response.data;
+1.5 Modificar products: docs, productInfo
+1.6 Cria a propriedade page dentro do state setando page = 1
+1.7 Criar a lógica da função nextPage e prevPage
+1.8 Desabilitar retorno quando não tiver pagina anterior ou proxima (função disable)
+----------------------------------------------------------------------------------------------------------------
+1. Configurando NAVEGAÇÃO (Rotas):
+1.1 instalar react-router-dom
+1.2 Criar arquivo router.js
+1.3 Configurar arquivo router.js
+1.4 Importar rotas dentro do App.js
+1.5 criar pasta products dentro da pasta pages
+1.6 criar arquivo index.js dentro da pasta products
+1.7 configurar o arquivo routes.js para exibir a pagina
+----------------------------------------------------------------------------------------------------------------
+1. Navegando por DETALHES:
+1.1 Cria a lógica do arquivo que irá exibir os detalhes do produto
+1.2 Criar estilização para detalhes do produto
